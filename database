@@ -1,0 +1,11 @@
+import sqlite3
+import os
+os.system('Clear')
+connection = sqlite3.connect("users.db")
+cursor = connection.cursor()
+
+command1 = [("Admin", "123")]
+
+cursor.execute(command1)
+
+cursor.execute()
