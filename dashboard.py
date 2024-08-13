@@ -142,11 +142,13 @@ class BesottedFate:
         root.bind('<Right>', self.next_part) #user presses right arrow key, goes to next part
         root.bind('<Left>', self.previous_part) #user presses left arrow key, goes to previous part
 
+    #enables keybind navigation
     def enable_movement(self):
         root.bind('<space>', self.next_part) 
         root.bind('<Right>', self.next_part) 
         root.bind('<Left>', self.previous_part) 
-        
+
+    #disables keybind navigation
     def disable_movement(self):
         root.unbind('<space>')
         root.unbind('<Right>')
