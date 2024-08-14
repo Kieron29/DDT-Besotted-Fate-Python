@@ -113,7 +113,7 @@ class logwindow:
 
         #if no input show warning
         if uname == "" or password == "":
-            messagebox.showinfo("", "Please fill out all fields.")
+            messagebox.showinfo("Warning", "Please fill out all fields.")
             return
         #checks database info
         connection = sqlite3.connect(DATABASE)
@@ -123,13 +123,13 @@ class logwindow:
         connection.close()
         #if matching info with database, allow access.
         if user:
-            messagebox.showinfo("", "Login Success")
+            messagebox.showinfo("Success", "Login Success")
             bfdb.logged_in = True
             self.top.destroy() 
             if self.redirect_to_db:
                 redirect_to_db()
         else:
-            messagebox.showinfo("", "Incorrect Username and Password")
+            messagebox.showinfo("Warning", "Incorrect Username and/or Password")
     #defines return to hompeage function
     def return_to_homepage(self):
         #exits out of page to homepage
@@ -196,10 +196,10 @@ class regwindow:
 
         #if no user input, display warning
         if uname == "" or password == "" or confirm_password == "": #if user enters nothing show warning
-            messagebox.showinfo("", "No input detected.")
+            messagebox.showinfo("Warning", "No input detected.")
             return
         if password != confirm_password: #if password does not match 
-            messagebox.showinfo("", "Incorrect Password.")
+            messagebox.showinfo("Warning", "Mismatching Password.")
             return
         
         #puts new user data into database
@@ -208,10 +208,10 @@ class regwindow:
         try:
             cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (uname, password))
             connection.commit()
-            messagebox.showinfo("", "Registration Successful")
+            messagebox.showinfo("Success", "Registration Successful")
             self.top.destroy()
         except sqlite3.IntegrityError: #if username input matches user in database
-            messagebox.showinfo("", "Username already exists.")
+            messagebox.showinfo("Error", "Username already exists.")
         finally:
             connection.close()
         #copy function
