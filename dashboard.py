@@ -17,20 +17,21 @@ class BesottedFate:
         self.bg_img = self.bg_img.resize((screen_width, screen_height))
         self.bg_img = ImageTk.PhotoImage(self.bg_img)
         self.bg_label = tk.Label(root, image=self.bg_img)
-        self.bg_label.place(relwidth=1, relheight=1)
+        self.bg_label.place(relwidth=1, relheight=1) #place bg image across screen
 
         #font and sizes
         label_font = ("MS Gothic", 24)
         dialogue_font = ("MS Gothic", 24)
         button_font = ("MS Gothic", 18)
 
-        #title for day
+        #title for day 
         self.title_label = tk.Label(root, text="Day One", font=label_font, bg='white')
-        self.title_label.place(relx=0.5, rely=0.01, anchor='n')
+        self.title_label.place(relx=0.5, rely=0.01, anchor='n') #top centre
 
         #dialogue box and positioning
         self.dialogue_frame = tk.Frame(root, bd=2, relief="solid", bg='white')
         self.dialogue_frame.place(relx=0.025, rely=0.1, relwidth=0.65, relheight=0.6) 
+        #label to display text with word wrap and left alignment
         self.dialogue_label = tk.Label(self.dialogue_frame, font=dialogue_font, anchor='nw', justify='left', bg='white', wraplength=screen_width * 0.6)
         self.dialogue_label.pack(fill="both", expand=True, padx=10, pady=10)
 
@@ -53,12 +54,12 @@ class BesottedFate:
         self.c2.pack(fill="x", padx=10, pady=5)
         self.c3 = tk.Button(self.choices_frame, text="Eat the food on the tray", font=button_font, height=3, command=lambda: self.choice('c3p1'))
         self.c3.pack(fill="x", padx=10, pady=(5, 10))
-        self.disable_choices()
+        self.disable_choices() #disable choices at beginning
 
         #settings and help buttons (set=settings)
         self.set_help_frame = tk.Frame(root, bd=2, relief="solid", bg='white')
         self.set_help_frame.place(relx=0.7, rely=0.1, relwidth=0.275, relheight=0.15) 
-        self.set_button = tk.Button(self.set_help_frame, text="Settings", font=button_font, command=self.settings)
+        self.set_button = tk.Button(self.set_help_frame, text="Settings", font=button_font, command=self.settings) 
         self.set_button.pack(side="top", fill="x", padx=10, pady=(10, 5))
         self.help_button = tk.Button(self.set_help_frame, text="Help", font=button_font, command=self.help)
         self.help_button.pack(side="top", fill="x", padx=10, pady=(5, 10))
@@ -390,7 +391,7 @@ class BesottedFate:
         help_frame = tk.Frame(help_window, bg='white')
         help_frame.place(relwidth=1, relheight=1)
 
-        #background image
+        #background image customisation
         help_img= Image.open("bfgarage.jpg")
         help_img = help_img.resize((self.root.winfo_screenwidth(), self.root.winfo_screenheight()))
         help_img = ImageTk.PhotoImage(help_img)
@@ -433,10 +434,10 @@ class BesottedFate:
     #setting page
     def settings(self): 
         settings_window = tk.Toplevel(self.root)
-        settings_window.title("Settings")
-        settings_window.attributes('-fullscreen', True)
+        settings_window.title("Settings") #window name
+        settings_window.attributes('-fullscreen', True) #make window fullscreen
     
-        #frame
+        #frame across screen
         settings_frame = tk.Frame(settings_window)
         settings_frame.place(relwidth=1, relheight=1)
 
@@ -450,11 +451,11 @@ class BesottedFate:
         bg_label.place(relwidth=1, relheight=1)
         bg_label.img = settings_img 
 
-        #title
+        #title customisation
         title_label = tk.Label(settings_frame, text="Settings", font=("MS Gothic", 50), bg='white')
         title_label.pack(pady=20)
     
-        #settings text
+        #settings text customisation
         settings_text = "Settings"
         text_label = tk.Label(settings_frame, text=settings_text, font=("MS Gothic", 18), bg='white', wraplength=settings_window.winfo_screenwidth())
         text_label.pack(pady=20)
@@ -474,10 +475,10 @@ class BesottedFate:
     #death screen
     def dead(self):
         death_window = tk.Toplevel(self.root)
-        death_window.title("Game Over")
-        death_window.attributes('-fullscreen', True) 
+        death_window.title("Game Over") #window name
+        death_window.attributes('-fullscreen', True) #makes window fullscreen
         death_frame = tk.Frame(death_window, bg='white')
-        death_frame.place(relwidth=1, relheight=1)
+        death_frame.place(relwidth=1, relheight=1) #makes frame across screen
 
         #background image
         death_img = Image.open("bfdeath.jpg")
@@ -489,7 +490,7 @@ class BesottedFate:
         death_label.place(relwidth=1, relheight=1)
         title_label = tk.Label(death_frame, text="Game Over", font=("MS Gothic", 50), bg='white')
         title_label.pack(pady=20)
-        death_text_label = tk.Label(death_frame, text=" \n At long last, you have met your fate.  \n  You have died, and your body is incinerated in a blast furnace.  \n You are now but a statistic in the evil world of Dr. Galhass who takes profit over people.  \n \n If you wish to revisit your options, click the restart button.  \n \n " , font=("MS Gothic", 24), bg='white')
+        death_text_label = tk.Label(death_frame, text=" \n At long last, you have met your fate.  \n  You have died, and your body is incinerated in a blast furnace.  \n You are now but a statistic in the evil world of Dr. Galham who takes profit over people.  \n \n If you wish to revisit your options, click the restart button.  \n \n " , font=("MS Gothic", 24), bg='white') #text and customisaton
         death_text_label.pack(pady=(5, 20)) 
 
         #restart and exit button
@@ -497,13 +498,13 @@ class BesottedFate:
         restart_button.pack(pady=10)
         exit_button = tk.Button(death_frame, text="Exit", font=("MS Gothic", 18), command=self.root.quit)
         exit_button.pack(pady=10)
-        death_label.img = death_img
+        death_label.img = death_img 
 
 #restart function
     def restart_game(self):
         self.current_text = self.text_part1 #sets it to beginning text
         self.dialogue_label.config(text=self.current_text)
-        self.current_part = 1
+        self.current_part = 1 #resets part to 1
         self.c1.config(text="Look outside your cell", command=lambda: self.choice('c1p1')) #use placeholder button
         self.c2.config(text="Pretend to sleep", command=lambda: self.choice('c2p1'))
         self.c3.config(text="Eat the food on the tray", command=lambda: self.choice('c3p1'))
