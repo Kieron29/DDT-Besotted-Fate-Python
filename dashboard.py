@@ -1,8 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-from tkinter import messagebox
 
-#create class for besotted fate content
+#new window for content game
 class BesottedFate:
     def __init__(self, root):
         self.root = root #shortens
@@ -147,7 +146,7 @@ class BesottedFate:
         root.bind('<space>', self.next_part) 
         root.bind('<Right>', self.next_part) 
         root.bind('<Left>', self.previous_part) 
-
+    
     #disables keybind navigation
     def disable_movement(self):
         root.unbind('<space>')
