@@ -38,11 +38,11 @@ def play():
     else:
         redirect_to_db() 
 
-#define register
+#create register to open
 def register():
     regwindow(bfdb)
 
-#define login
+#create login to open
 def login():
     logwindow(bfdb)
 
@@ -58,7 +58,7 @@ def exit_out():
 #clears all widgets 
 def return_to_homepage():
     for widget in bfdb.winfo_children():
-        widget.destroy()
+        widget.destroy() #removes widgets
     main_homepage()
 
 #makes new window - login window
@@ -106,7 +106,7 @@ class logwindow:
         #return button size and poistion
         tk.Button(frame, text="Return", command=self.return_to_homepage, height=2, width=10, font=button_font).grid(row=5, columnspan=2, pady=20)
         
-    #defining login details
+    #defining and validating login details
     def Ok(self):
         uname = self.e1.get() #uname short for username
         password = self.e2.get()
@@ -119,15 +119,15 @@ class logwindow:
         connection = sqlite3.connect(DATABASE)
         cursor = connection.cursor()
         cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (uname, password))
-        user = cursor.fetchone()
+        user = cursor.fetchone() 
         connection.close()
         #if matching info with database, allow access.
         if user:
             messagebox.showinfo("Success", "Login Success")
             bfdb.logged_in = True
-            self.top.destroy() 
+            self.top.destroy() #close login window
             if self.redirect_to_db:
-                redirect_to_db()
+                redirect_to_db() 
         else:
             messagebox.showinfo("Warning", "Incorrect Username and/or Password")
     #defines return to hompeage function
@@ -188,7 +188,7 @@ class regwindow:
         tk.Button(frame, text="Login", command=self.redirect_to_login, height=2, width=15, font=button_font).grid(row=7, columnspan=2)
         tk.Button(frame, text="Return", command=self.return_to_homepage, height=2, width=10, font=button_font).grid(row=8, columnspan=2, pady=20)
 
-    #defining register details
+    #defining and validating register details
     def Ok(self):
         uname = self.e1.get()
         password = self.e2.get()
