@@ -48,6 +48,7 @@ class BesottedFate:
         #placeholder button (first choice)
         self.choices_frame = tk.Frame(root, bd=2, relief="solid")
         self.choices_frame.place(relx=0.7, rely=0.55, relwidth=0.275, relheight=0.35) 
+        #c = choice
         self.c1 = tk.Button(self.choices_frame, text="Look outside your cell", font=button_font, height=3, command=lambda: self.choice('c1p1'))
         self.c1.pack(fill="x", padx=10, pady=(10, 5))
         self.c2 = tk.Button(self.choices_frame, text="Pretend to sleep", font=button_font, height=3, command=lambda: self.choice('c2p1'))
@@ -94,7 +95,7 @@ class BesottedFate:
         self.text_part14 = ("You step into the rest zone and the guards close the barb-wired cage doors.  There are about 50 prisoners in the area which all sit on the damp, yellow grass.  You look up and see a glimmer of the outside sun discretely waving back at you. It's not much, but you feel a sense of relief.  Your eyes wonder to Melissa, finally seeing her directly and you admire her expression as she tilts her head confused on why you are staring so intently.  Melissa whispers on how she is happy with your choice and you start talking about life as it was before. You mention...")
         self.text_part15 = ("Time passes, and you find yourself separated from Melissa and in your respective cell. It is night time and you are placed into the cell you started in.  A long day of labour has proved fruitful as you carry the bottle of Hydrochloric Acid.  Melissa slips a note under the same crack which you open up quietly.   \n‘We can escape whenever you want.  We can even do it tonight.  You make the call.’ \nYou think about it meticulously.  You can attempt it tonight and be free faster, or you can bide your time, exploring the large factory.")
 
-        #outcomes
+        #outcomes c1 = choice 1, o1 = outcome 1
         self.c1o1 = ("You look outside your cell to see who is causing the loud footstep noises. The figure walking down notices you and shouts in a foreign language. It is best not to stand there any longer as he does not seem pleased. You sit back down on the bench.")
         self.c2o1 = ("Lying on your bed, you peer with one eye open and the guard stares into your cell. He wields a thunderlance and strikes the metal bars in an immense rage. You jolt up and he shouts in a foreign language.")
         self.c3o1 = ("You figure that you need some energy, hauling the sludge into your mouth and swallowing. It reminds you of clumped sour milk. You wince at the taste and nervously avoid making eye contact with the passing guard, and he reciprocates.")
@@ -296,7 +297,7 @@ class BesottedFate:
     #choices and the outcomes that follow
     def choice(self, choice):
         self.disable_choices()
-        if choice == 'c1p1': #if user picks, show linked outcome
+        if choice == 'c1p1': #if user picks, show linked outcome c1 = choice 1, p1 = part 1
             self.dialogue_label.config(text=self.c1o1) #outcome
         elif choice == 'c2p1':
             self.dialogue_label.config(text=self.c2o1)
