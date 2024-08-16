@@ -30,6 +30,7 @@ def generate_password():
     password = "".join(random.sample(all_chars, length)) #randomises
     return password
 
+#bfdb = besotted fate dashboard
 #when clicking play, if user is not logged in show message.
 def play():
     if not hasattr(bfdb, 'logged_in') or not bfdb.logged_in:
@@ -309,6 +310,7 @@ def help():
 #app title
 bfdb = tk.Tk()
 bfdb.title("Besotted Fate")
-initialize_db()
+initialize_db() #initialise database
 main_homepage()
-bfdb.mainloop()
+bfdb.mainloop() #start bfdb loop
+
