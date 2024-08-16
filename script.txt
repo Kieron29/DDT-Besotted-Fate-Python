@@ -1,0 +1,373 @@
+Help Page:  
+
+How to Play:
+Besotted Fate is a story decision-based game where you wake up in a factory in an unknown location.  Your mission is to survive and escape, preferably shutting down this criminal enterprise.  
+
+Read through the dialogue and choose one out of three choices that you think is best.  This will lead you through an adventure that can lead to multiple different endings.  Every day is a checkpoint.  If you die, you will be redirected to your latest day.  
+
+To reset your progress, you can do this by going to play>settings>reset progress.
+Note that there is no audio within the game.
+
+Credits: 
+Kieron O.  - Writer and Developer
+StableDiffusionWeb - AI Art Generator
+KD, KC - Assistance with Grammar and Storyline
+
+
+
+
+Setting - A large factory, seemingly operating but in a rural area.
+Characters:
+You, a teenager 
+The girl you will work with
+The workers of the factory
+The guards of the factory
+The CEO of the factory
+
+Endings:
+Good ending (You escape?)
+Bad ending (You become worker forever)
+Tragic ending (The people who help and trust you get executed for ur freedom)
+Betrayal ending (The people u trust are not to be trusted)
+Secret ending (You fall into a machine and get grinded to pieces)
+
+
+Prelude:
+Droplets of water fall into your drowsy eyes.  You wake up, seemingly unnerved but completely confused.  ‘This isn’t where I should be’, you think, as your eyes adjust to the bright beam of light from a slit of welded steel.  The dark concrete floor is mouldy and the air is damp.  You are in a 4x4 prison cell, it seems.  The only thing keeping you from the rats and cockroaches feeding on your flesh is a rugged tarp, suspended on a chain-linked bench on which you lie.  Whatever happened to your cosy bed with cold pillows and the air conditioner?   Sitting next to your feet is a tray with bread with lumps on it, clearly unidentified substances that are supposedly edible.   On your right is the hallway, separated by iron bars and an iron door that looks aged but well fitted that not even a truck could budge.  And towards your left, a toilet with a pungent stench, something you probably should not inspect.  Directly opposite is… well nothing.  Just a wall and the etched tallies of a previous tenant that you replaced.  Lastly, behind you.  A concrete wall separating you from a neighbour that soon may very well be part of your life.  Yet for now, you have no idea where you are, what time it is and why you’re here.  All you know is that this place is ominous and you need to escape. 
+
+Textpart3
+A trudging of heavy iron-clad boots can be heard in the distance, growing louder with every step.  It seems you are not the only one in a cell either, as you can hear the panting and groaning of similar state victims in cells surrounding you.   You…
+
+C1p1 - Grasp the iron bars and look at who is marching down the hallway
+C2p1 - Lie down and pretend to sleep
+C3p1 - Eat the food on the tray, you are hungry after all.
+
+c1o1:
+The figure walking down notices you and shouts in a foreign language.  It is best not to stand there any longer as he does not seem pleased.  You sit back down on the bench. (Go to Scene 2)
+
+c2o1:
+You peer with one eye open and the guard stares into your cell.  He wields a thunderlance and strikes the metal bars in an immense rage.  You jolt up and he shouts in a foreign language.  (Go to Scene 2)
+
+c3o1:
+You haul the sludge into your mouth and swallow. It reminds you of clumped sour milk. You avoid making eye contact with the passing guard, and he reciprocates.  
+(Go to scene 2)
+
+
+Textpart4
+After that little anxiety episode, you notice that there is a piece of shredded paper underneath the bench, just barely concealed by the hole-ridden tarp.  Your curiosity results in you reading this note.  “I’m [Girl’s Name], I’m here to try to help but I would think that you would be as highly confused as I was before. Write back and slip it under the crack of the slab next to you”. You…
+
+C1p2 - Write back with “What’s going on?”
+C2p2 - Leave the paper alone
+C3p2 - Write back with “Who are you?”
+
+c1o2:
+You discreetly slip it under the crack and you can hear the motions of the unknown sender collecting your writing.  
+
+c2o2:
+Your boredom exceeds you.  You decide to write back. 
+(Enforce option 1 and 2)
+
+c3o2:
+You discreetly slip it under the crack and you can hear the motions of the unknown sender collecting your writing.  
+
+Textpart5
+A few minutes later, a shuffling occurs and the crinkled paper is lodged back into your possession.  ‘I’m a nobody from a small town Amarillo, Texas.  I don’t know why we’re here, but I have a wild guess.  We were drugged and kidnapped, forced to create contraband for an organisation.  Regarding the language the guards speak, I assume it’s Russian.  I’ve been here for around 5 days, but I don’t have the best sense of time.’  
+
+C1p3 - Very suspicious.
+C2p3 - Ask, ‘How do we get out of here?’ 
+C3p3 - Whisper loudly through the cracks, trying to get her attention.
+
+If c1o3:
+This is certainly suspicious.  This must be a setup.  Maybe I’ll just play along…
+
+
+If c2o3:
+You slip back the note and it is received a few seconds later.  
+
+
+If c3o3:
+In an attempt to attract her attention, you whisper “HEY!”  A guard notices this and rushes to your cell before you can even react.  A back-breaking blow of electricity and hard wire is jabbed between the iron bars and into your neck.   
+
+
+Textpart6
+The note was replaced with a new sheet of paper with reasonably sized text.  ‘You don’t know this yet, but the guards are sensitive to hearing and smelling.  Their eyesight is faulty but they can make out a man is not where he is supposed to be.  Here is the bright side, I have a plan to escape.  In an hour, we will be released to work in the factory and it seems we will have a good chance of smuggling some metals/chemicals and other elements to help us escape.  Are you in?’  
+
+C1p4 - (question her on why she knows so much)
+C2p4 - I’m in.  
+C3p4 - Change your mind.
+
+If c1p4 then c1o4
+She replies, ‘I’m a quick learner.  I’ve seen many people who talk too much and get beheaded.  However, they could not spot me slipping a metal wire into my pocket.  Do you trust me or not?’   
+
+If c2p4 then c2o4
+She replies, “Great. I promise I won’t let you down  When you hear the dull ringing of a bell, the doors release and we make our way to the assembly line.” 
+
+If c3p4 then c4o4
+I’m not ready for this.  What if we get caught? How can I trust her?  Too many possibilities for error I might get a heart attack.
+
+
+—
+
+Textpart 6.1:
+Ignore the note.  I can’t take these chances. I don’t know who she is so the only person I can trust is myself.  This could be a ploy so I will wait and plan an escape by myself.
+With the flimsy spork you get from the food tray, you chip away at the ‘weakest’ point of the wall that separates you from freedom.
+Take your time.
+Use your newly acquired information to escape.
+
+Textpart 6.11 or 6.12:
+You spend countless time working and observing your surroundings, collecting information on the layout of the building and how to get out. You’ve been chipping away at your cell wall for a very long time, enough to see the outside.
+Break the wall, you’re free.
+Take your time.
+Both options lead to scene 4.1E
+Textpart 6.11 or 6.12 E (choice doesn’t matter)
+Before you can go ahead with your choice, you crumble to the floor. Your heart tries to run one last time as your senses numb away further and further, your mind melting into tar until there’s nothing but an empty void.
+
+
+
+
+ 
+
+
+Textpart 6.2 (Betrayal Ending?) [he is placed in a setup, he thinks he is back in his original cell but he is in a setup with paid actors ):
+You wake up after what feels like an eternity.  You feel on your back incisions and dried blood creating eerie patterns like a bad tattoo.  Your head is a spin and your vision is blurred.  A near-fatal mistake, you now learn these guards contain unblemished hearing senses.  
+You write back saying, “How the hell do we get out of here??”
+Go to rest.  Everything aches.
+
+
+
+Textpart 7:
+Take the risk and trust her, why not? Moments later, the bell rings and you see the vault-like door move outwards.  You see everybody stand up and make their way outside the cell where they stand still.  ‘I should probably do that’ you think, as you muster the strength to step outside from the cell for the first time.
+
+Imitate the cell prisoners.  Stand straight, Eyes locked to the wall ahead of you, arms to the side.
+Peer to see the person you’ve been talking to.
+You refuse.  I’m not doing anything.
+
+If option 1:
+A squad of guards march across the hallway, with a laser gun scanning the forehead of every prisoner.  Not a word was exchanged, not a look either.  (Go to Scene 6)
+
+If option 2:
+Lo and Behold, a girl stands with chestnut brown hair and a large white lab coat.  It is dirty and torn but emanates a bright aura of freedom and hope.  She does not dare look back, so you turn your attention back to the cell opposite where you stand.  The guards approach and they proceed to scan your forehead. (Go to Scene 6)
+
+If option 3:
+You sit and wait.  The dull metal helmet stacked on a guard’s obscured face menacingly turns to you.  The baton is raised and your heart leaps.  Clenching your fists and planting your feet to the ground you decide action is better than reaction.  A full swing to his helmet with your bare knuckles misses, but the guard doesn’t.  The baton smashes your skull into fragments simultaneously frying your insides until you are nothing more than a statistic.
+(Bad Ending - You Died) [End Game]
+
+Textpart 8:
+All prisoners suddenly turn to their left and start following the guards down the hallway.  You copy every move of the unknown soul in front of you until you reach a small chair with your name on it.  ‘What the hell am I supposed to do with this?’ You think, as you see the taskboard and quota that is expected of you, lying on the wooden stool you would sit on.  As you read the procedure, a singular tap on your shoulder from a being behind you is felt.  You..
+Look behind you, of course.
+In a hushed tone, reply with “Yes?”
+Pretend you didn’t feel it
+
+If option 1:
+It’s the girl on the cell to your right, who speaks in a hushed but clear voice.  “Hey, [User-Input Name].  We should be in the clear as the guards rely on CCTVs to monitor us.  However, after a few hours, they arrived to check and simultaneously the CCTV seemed to turn off.   Anyways, I’ll help you with your work but you seem to have the easiest of the lot.”
+(Go to Scene 7)
+
+If option 2:
+“Turn around idiot, we are safe here.” and so you do.  It’s the girl on the cell to your right, who speaks in a hushed but clear voice.  “Hey, [User-Input Name].  We should be in the clear as the guards rely on CCTVs to monitor us.  However, in a few hours, they will arrive to check and simultaneously the CCTVs seem to turn off.   Anyways, I’ll help you with your work but you seem to have the easiest of the lot.”
+(Go to Scene 7)
+
+If option 3:
+The tap is harder this time, and you should probably turn around. “Turn around idiot, we are safe here.” and so you do.  It’s the girl on the cell to your right, who speaks in a hushed but clear voice.  “Hey, [User-Input Name].  We should be in the clear as the guards rely on CCTVs to monitor us.  However, in a few hours, they will arrive to check and simultaneously the CCTVs seem to turn off.   Anyways, I’ll help you with your work but you seem to have the easiest of the lot.”
+(Go to Scene 7)
+
+
+Textpart 9:
+Your first task on this list is a very questionable one.  A machine requires adjustments and the wires need to be connected in the right slot.  You look up and pull out a metal crate that resembles a voltage box.  ‘I guess I have to fix this darn thing’, you say to yourself.
+
+There are 3 wires in this voltage box with the colour code - Red, Blue and Green.  On the taskbar, there are the following clues;
+The blue wire is not next to the wire you need to cut.
+The green wire is not on the far right.
+The red wire is to the left of the blue wire.
+
+You need to cut the wire that will safely disable the voltage box from experiencing a high current fault.  If you cut the wrong wire, this could mean death.  What do you choose?
+
+Red
+Blue
+Green
+
+
+
+
+
+If red:
+“Woah, you’re learning quickly.” says Melissa.  I suppose the next task would be trickier so you would need some of my help.  I can’t tell you much since I’ve never done it,  only saw others.  Maybe something resistant to leakage will help with your task”
+
+If Blue:
+And you close your eyes as you grab the plier, snapping the blue cord in half.  Everything blurs and all your nerves seem to rejoice at once.  Your eyes widen and roll back as you scream out in utter fear.  But nothing comes out.  Just an endless spasm of volts lift you into the horizon and you can’t help but wish you thought it through just a little more closely.
+
+If green:
+The voltage box explodes as you cut the green cord in half.  You look to your right - Melissa stares in shock.  You look to your left - workers have weary but widened eyes.  ‘I cut the wrong one.’ you thought, as you felt something on your chest.  As you look down, you see a large chunk of blasted, sizzling metal jutting out your ribs.  At that moment, your body’s adrenaline runs out and you fall into the depths of your abyss.
+
+
+Textpart 10:
+A crucial oil-filled machine lays in front of you, dire for repair.  The machine has a compartment with a sensitive cable underneath that in no circumstance should have any oil dripping on it.  You need to replace the bottom of the compartment and screw it on without letting any oil drip onto the cable.  You have 3 different screws available to you.  What do you use to tighten the bottom without letting oil leak onto the cable?
+
+Screws with a rubber gasket
+Screws with a washer
+Screws with a nylon coating
+
+
+
+If 1:
+You fasten the bottom of the compartment with screws and rubber gaskets, then fill the container with oil. The machine seems to be slightly sturdier now, and you feel slightly accomplished. “Not bad for a first time huh?” Melissa commented. As long as it’s been, we have a small 30-minute break inside a large prison cell.”
+
+If 2 
+You fasten the bottom of the compartment with screws and washers. You fill up the compartment with oil and you do not notice beads of oil forming next to the screws underneath.  Every second you fill the container with oil, the drips increase and fly millimetres away from the exposed cable.  You notice it too late—the oil has dripped and an incredible crackling rages throughout the factory.  The cable short circuits and acrid smoke possess the space.  A fire ruptures as smoke, oil and plastic fill your lungs.  The gravity of the situation did not register until guards rushed over with fire extinguishers and grabbed you out of the burning wreck.  But It doesn’t matter.  You are already dead.
+
+If 3
+You fasten the bottom of the compartment with screws and a nylon coating, then fill the container with oil. The machine seems to be slightly sturdier now, and you feel slightly accomplished. “Not bad for a first time huh?” Melissa commented.  As long as it’s been, we have a small 30-minute break inside a large prison cell.”
+
+
+Textpart 11:
+You finished your tasks for the time being, and the bell rings.  You notice in the corner of your eye that guards are entering the facility to assess the workplace.  “Well, I’ve finished the machine and it should be functioning.” …but wait?  “Which button do I press to show the guards I have completed the task?” You question as you see a controller with 3 different coloured buttons.  Before you can even think, a guard approaches and waits for the quod erat demonstrandum.  You have a feeling that you have to press the right button or you will be dead on the spot.
+Press the ‘Yellow’ Button
+Press the ‘Red’ Button
+Press the ‘Green’ Button
+
+Hint - Maybe the wires in the previous puzzle are connected to the buttons.
+
+If option 1:
+All is quiet for 5 seconds and you begin to shake.  Was this the wrong button?  Suddenly, the machine splurts to life and electricity is channelled through the cables.  The guard ticks something off his clipboard, exhales, and leaves.
+
+If option 2:
+You wait and pray the machine splurts to life.  But it never does.  You realise the red button is connected to the red wire - but you have severed that wire. The guard grins behind his masked helmet.  The baton is raised and your heart leaps.  Clenching your fists and planting your feet to the ground you decide action is better than reaction.  A full swing to his helmet with your bare knuckles misses, but the guard doesn’t.  The baton smashes your skull into fragments simultaneously frying your insides until you are nothing more than a statistic.
+
+If option 3:
+Smoke pours out of the metal crate that you fiddled with.  Did I press the wrong button?  Indeed you have - it explodes in your face but you managed to avoid getting hurt.  You can’t cheat death twice, as the guard whips out his weapon from the holster.  ‘It’s so over.’ You say to yourself.  The baton is raised and your heart leaps.  Clenching your fists and planting your feet to the ground you decide action is better than reaction.  A full swing to his helmet with your bare knuckles misses, but the guard doesn’t.  The baton smashes your skull into fragments simultaneously frying your insides until you are nothing more than a statistic.
+
+
+Textpart 12: [Changed]
+You passed the inspection and Melissa approached you.   
+“Well done.  You know, I wouldn’t have teamed up with you if you didn’t have problem-solving skills”  She said.  
+“Uhm thanks?” You reply and she giggles.
+“Oh, we are making our way to the ‘rest’ cell.  Here is our only chance to pass the chem lab, the steelworks and the guard’s locker area.  We should take this opportunity to steal an item to escape from here.” She dictates.  “It’s your choice, I’ll trust your decision.”
+Choose the Chem Lab.
+Choose the Steelworks.
+Choose the guard’s locker area 
+
+If option 1:
+She smiles and looks around quickly.  “Okay, right over there is an unguarded trolley.  We really gotta be careful though.  I’ll try to cover you as you grab something - but make it quick.”
+
+If option 2:
+“Snap out of it. Don’t they say you miss 100% of the shots you don’t take?” She remarked.  
+“Yeah well, I don’t want to get shot. Are you sure we won’t get caught?”  You replied, nervously.  “Ugh, that trolley over there is unguarded.  I’ll cover you as you grab something - just make it quick.”
+
+If option 3:
+“Right.  You should stop saying things like this or we’ll actually get killed in the dumbest way possible.” Melissa glared.  “Anyways.  I’ll cover you as you grab something from that unguarded trolley - but make it quick!”
+
+Textpart 13:
+You relay your thoughts to Melissa and she agrees.  You both walk towards the Chem lab and see trolleys lined up outside that seem to contain several pocketable items.  You decide to grab…
+Small bottle of Hydrochloric Acid 
+Tweezers
+Beaker of Sulfuric Acid
+
+If option 1:
+Perfect.  This should erode metal locks very easily.  Melissa is satisfied with your choice and you slip it in your pants.  Nonchalantly, you both make your way towards the rest area.
+(Go to Scene 11)
+
+If option 2:
+The tweezers are of such a bad quality that you place them back.  Guess you’re going to go for the small bottle of Hydrochloric Acid.
+(Enforce option 1 or 3)
+
+If option 3:
+You grab the sulfuric acid and nonchalantly walk towards the rest area.  As you walk, you trip on an unseen cord leading to you dropping the beaker.  It shatters and you fall right on it.  This loud noise attracts the guards as your tissues and flesh are vaporised and the fumes burn your insides.  The guard towers over you as you struggle to survive, and he fires a singular shot to finish you off.
+(Bad Ending - You died)
+
+(Moved to day 2 or 3)
+Textpart 13.2:
+You relay your thoughts to [Girl’s Name] and she agrees.  You both walk towards the steel mill and see a tool table left unsupervised.  With the little time you have, you grab…
+A wrench
+A battery-powered drill
+A coal shovel
+
+If option 1:
+A wrench is a jack of all trades.  You can weaponise it, loosen bolts and piping and break weak objects with its frigid alloy build.  You slip it into your pants and walk away. 
+(Go to Scene 11)
+
+If option 2:
+The battery-powered drill is portable and quieter than the average drill.  You have your doubts about the functionality, so you decide to check if there are batteries placed.  There is, but as you place the cover back on the drill trigger jams.  The tip whirrs and the twist catches onto your rugged shirt.  You desperately search for a kill switch but it spins so fast it eats past your shirt and penetrates your stomach.  The pain as your flesh and insides are blended does not help your situation as guards are alerted from the start.   You fall on the ground, fighting to stop the drill but the baton comes swinging down.  
+(Bad Ending - You Died)
+
+If option 3:
+‘I could chip away the wall’, so you decide to wield the metal coal shovel.  
+“That’s too big to conceal.” mutters [Girl’s Name], and you see the point given.
+(Enforce 1 or 2)
+
+(Move to day 3?)
+Textpart 13.3:
+You motion Melissa to follow you to the Guard’s locker room.  
+“All we have to do is find a key.” You exclaim, but Melissa is unoptimistic.
+A door is seen to be ajar, but a sleeping guard is next to the entrance.  
+“Stay here, I got this.” You tell Melissa.  
+Tiptoeing and holding your breath you approach the door with eyes locked on the sleeping guard.  The doorknob is just in reach and all you have to do is nudge it wider for you to fit in.  
+Before you can even touch it, the guard turns and stares at you in the act.  The guard gets up and whips out his baton. You..
+Swing for his head [Use 1 Strength point]
+Make up an excuse
+Kick his liver area [Use 1 Strength point]
+
+If option 1:
+The baton is raised and your heart leaps.  Clenching your fists and planting your feet to the ground you decide action is better than reaction.  A full swing to his helmet with your bare knuckles misses, but the guard doesn’t.  The baton smashes your skull into fragments simultaneously frying your insides until you are nothing more than a statistic.
+(Bad Ending - You died)
+
+If option 2:
+You surrender and try make to an excuse.  But the only thing your brain can think of in the spur of the moment is
+“I thought this was the toilet.”  
+Skeptical, the guard alerts his squad with a walkie-talkie.  [Girl’s Name] stares in disappointment and mouths ‘fool’.  
+You are arrested and moved to solitary confinement. 
+(Bad Ending - You will be heavily monitored for the rest of your life, where you will work and die with no chance of escape.)
+
+If option 3:
+As the guard prepares a swing you swiftly kick his liver.  It stuns him and he clutches the area affected groaning slightly.  His baton is still tightly gripped.  [Girl’s Name] decides to help you out and put the guard in a chokehold.  You need to incapacitate him before he reaches to the walkie-talkie for backup.  You…
+Grab his right wrist, twist it and disarm him from the baton.
+Swing for his head
+Front thrust kick his chest
+
+Textpart 13.3.3:
+If option 1: 
+After the maneuver, he drops the baton and you pick it up, not knowing quite sure how to use it.  ‘I guess I’ll just swing it?’ You think and you do.  [Girl’s Name] ducks out of the way and the attempt connects.   The blunt force trauma smashes the side of his helmet in bits and his balaclava is ripped.  
+
+If option 2:
+Clenching your fists and planting your feet to the ground you decide action is better than reaction.  A full swing to his helmet with your bare knuckles misses and hits [Girl’s Name] instead.   She loosens her grip and the guard regains balance.   Enraged he slams you on the wall and prepares for a swing.  The baton smashes your skull into fragments simultaneously frying your insides until you are nothing more than a statistic.
+[Bad Ending - You Died]
+
+If option 3:
+A front thrust kick is strong but you forgot to take into account [Girl’s Name] which is putting the guard in a chokehold.  The guard topples backwards and falls on [Girl’s Name].  The guard recovers from the fall much quicker, sending 5000 volts into [Girl’s Name].  You don’t know what to do so you surrender.  
+(Bad Ending - You forever live in solitary confinement and guilt of indirectly killing [Girl’s Name]).
+
+Textpart 14:
+You step into the rest zone and the guards close the barb-wired cage doors.  There are about 50 prisoners in the area which all sit on the yellow grass.  You and Melissa are happy with your choice and you start talking about life as it was before. 
+Your pet dog, Rocco
+You like cheese
+That you’re investing in TNVC
+
+“Hey Melissa, you know I got a dog named Rocco?  He ALWAYS drools everywhere but I still love him.  I can’t help but wonder where he is now.  Or if he even knows I’m gone.”  Melissa giggles and replies, “He sounds cute and I’m sure he’s fine. I have a cat named Stef but I’m sure she’s fine too. Knowing her, she’s probably having a good time eating rats behind the garbage in Arby’s.”
+“Bro, I like cheese.  I want to eat some cheese right now.” You exclaim randomly.  “That is so random,” Melissa replied. “But relatable.” \n”I know right? Like I could go for a cheesy mozzarella pizza or a bowl of cheesy ramen or a-”
+“SHHH! Don’t make me hungry!” She jokingly interrupted.
+“In my free time, I love to invest in stocks.  I invested about $7,500 in TNVC and I got about a 55% profit.  Like, I can’t believe no one saw how TNVC’s new release completely crushes FLMA’s product.” You gloated.  “Oh, that’s good for you!” She replied, invested in your speech on investments.  “Yeah, and I went ALL into TNVC which was nerve-wracking”
+
+
+<Insert Time Cutscene> 
+
+Textpart 15:
+
+Time passes, and you find yourself separated from Melissa and in your respective cell.
+It is night time and you are placed into the cell you started in.  A long day of labour has proved fruitful as you carry the bottle of Hydrochloric Acid.  Melissa slips a note under the same crack which you open up quietly.  
+‘We can escape whenever you want.  We can even do it tonight.  You make the call.’
+You think about it meticulously.  You can attempt it tonight and be free faster, or you can bide your time, exploring the large factory.   
+Escape now
+Escape later
+
+If option 1:
+Go to Scene A
+
+If option 2:
+Go to Scene 13
+
+Textpart 13:
+
+<Day 2>
+
+You wake up to a sharp pain in your back. The bed is as solid as the cell, you would’ve been better off sleeping on the floor. It’s small and barely noticeable, but you can feel your life draining away.
+
+
+
