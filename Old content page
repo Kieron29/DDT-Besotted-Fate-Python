@@ -1,0 +1,165 @@
+import tkinter as tk
+from PIL import Image, ImageTk
+
+#new window for content game
+class BesottedFate:
+    def __init__(self, root):
+        self.root = root #shortens
+        root.title("Besotted Fate") #creates title Besotted Fate
+        root.attributes('-fullscreen', True) #makes fullscreen
+
+        #adjust app to user's screen width and height
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight()
+
+        #add background image
+        self.bg_img = Image.open("bfcell.jpg")
+        self.bg_img = self.bg_img.resize((screen_width, screen_height))
+        self.bg_img = ImageTk.PhotoImage(self.bg_img)
+        self.bg_label = tk.Label(root, image=self.bg_img)
+        self.bg_label.place(relwidth=1, relheight=1) 
+
+        #font and sizes
+        label_font = ("MS Gothic", 24)
+        dialogue_font = ("MS Gothic", 24)
+        button_font = ("MS Gothic", 18)
+
+        #title for day 
+        self.title_label = tk.Label(root, text="Day One", font=label_font, bg='white')
+        self.title_label.place(relx=0.5, rely=0.01, anchor='n')
+        #dialogue box and positioning
+        self.dialogue_frame = tk.Frame(root, bd=2, relief="solid", bg='white')
+        self.dialogue_frame.place(relx=0.025, rely=0.1, relwidth=0.65, relheight=0.6) 
+        self.dialogue_label = tk.Label(self.dialogue_frame, font=dialogue_font, anchor='nw', justify='left', bg='white', wraplength=screen_width * 0.6)
+        self.dialogue_label.pack(fill="both", expand=True, padx=10, pady=10)
+
+        #hint box 
+        self.hints_frame = tk.Frame(root, bd=2, relief="solid", bg='white')
+        self.hints_frame.place(relx=0.025, rely=0.75, relwidth=0.65, relheight=0.15)
+        #hint label config
+        self.hints_label = tk.Label(self.hints_frame, font=label_font, bg='white')
+        self.hints_label.pack(padx=10, pady=5, anchor='nw')
+        #create new label (nav=navigation) as it will change
+        self.nav_label = tk.Label(self.hints_frame, text="Press spacebar or arrow keys to navigate around the text", font=("MS Gothic", 20), bg='white')
+        self.nav_label.pack(padx=10, pady=(10, 5), anchor='nw') 
+
+        #placeholder button (first choice)
+        self.choices_frame = tk.Frame(root, bd=2, relief="solid")
+        self.choices_frame.place(relx=0.7, rely=0.55, relwidth=0.275, relheight=0.35) 
+        #c = choice
+        self.c1 = tk.Button(self.choices_frame, text="Look outside your cell", font=button_font, height=3, command=lambda: self.choice('c1p1'))
+        self.c1.pack(fill="x", padx=10, pady=(10, 5))
+        self.c2 = tk.Button(self.choices_frame, text="Pretend to sleep", font=button_font, height=3, command=lambda: self.choice('c2p1'))
+        self.c2.pack(fill="x", padx=10, pady=5)
+        self.c3 = tk.Button(self.choices_frame, text="Eat the food on the tray", font=button_font, height=3, command=lambda: self.choice('c3p1'))
+        self.c3.pack(fill="x", padx=10, pady=(5, 10))
+        self.disable_choices() #disable choices at beginning
+
+        #settings and help buttons
+        self.set_help_frame = tk.Frame(root, bd=2, relief="solid", bg='white')
+        self.set_help_frame.place(relx=0.7, rely=0.1, relwidth=0.275, relheight=0.15) 
+        self.set_button = tk.Button(self.set_help_frame, text="Settings", font=button_font) 
+        self.set_button.pack(side="top", fill="x", padx=10, pady=(10, 5))
+        self.help_button = tk.Button(self.set_help_frame, text="Help", font=button_font)
+        self.help_button.pack(side="top", fill="x", padx=10, pady=(5, 10))
+
+        #content - dialogue box
+        self.text_part1 = (
+            "Droplets of water fall into your drowsy eyes. You wake up, seemingly unnerved but completely confused. "
+            "‘This isn't where I should be’, you think, as your eyes adjust to the bright beam of light from a slit of welded steel. "
+            "The dark concrete floor is mouldy and the air is damp. You are in a 4x4 prison cell, it seems. "
+            "The only thing keeping you from the rats and cockroaches feeding on your flesh is a rugged tarp, suspended on a chain-linked bench on which you lie. "
+            "Whatever happened to your cosy bed with cold pillows and the air conditioner?")
+        self.text_part2 = (
+            "Sitting next to your feet is a tray with bread with lumps on it, clearly unidentified substances that are supposedly edible. "
+            "On your right is the hallway, separated by iron bars and an iron door that looks aged but well fitted that not even a truck could budge. "
+            "And towards your left, a toilet with a pungent stench, which you probably should not inspect. "
+            "Directly opposite is… well nothing. Just a wall and the etched tallies of a previous tenant that you replaced. "
+            "Lastly, behind you. A concrete wall separating you from a neighbour that soon may very well be part of your life. "
+            "Yet for now, you have no idea where you are, what time it is and why you're here. "
+            "All you know is that this place is ominous and you need to escape.")
+        #changed to use \n instead
+        self.text_part3 = ("A trudging of heavy iron-clad boots can be heard in the distance, growing louder with every step. It seems you are not the only one in a cell either, as you can hear the panting and groaning of similar state victims in cells surrounding you. You…")
+
+        #outcomes
+        self.c1o1 = ("You look outside your cell to see who is causing the loud footstep noises. The figure walking down notices you and shouts in a foreign language. It is best not to stand there any longer as he does not seem pleased. You sit back down on the bench.")
+        self.c2o1 = ("Lying on your bed, you peer with one eye open and the guard stares into your cell. He wields a thunderlance and strikes the metal bars in an immense rage. You jolt up and he shouts in a foreign language.")
+        self.c3o1 = ("You figure that you need some energy, hauling the sludge into your mouth and swallowing. It reminds you of clumped sour milk. You wince at the taste and nervously avoid making eye contact with the passing guard, and he reciprocates.")
+
+        self.current_part = 1
+        self.button()
+        
+        #controls for users
+        root.bind('<space>', self.next_part) #user presses spacebar, goes to next part
+        root.bind('<Right>', self.next_part) #user presses right arrow key, goes to next part
+        root.bind('<Left>', self.previous_part) #user presses left arrow key, goes to previous part
+
+    #enables keybind navigation
+    def enable_movement(self):
+        root.bind('<space>', self.next_part) 
+        root.bind('<Right>', self.next_part) 
+        root.bind('<Left>', self.previous_part) 
+    
+    #disables keybind navigation
+    def disable_movement(self):
+        root.unbind('<space>')
+        root.unbind('<Right>')
+        root.unbind('<Left>')
+
+    #placeholder buttons - disabled state
+    def disable_choices(self):
+        self.c1.config(state="disabled")
+        self.c2.config(state="disabled")
+        self.c3.config(state="disabled")
+
+    #placeholder buttons - enabled state
+    def enable_choices(self):
+        self.c1.config(state="normal")
+        self.c2.config(state="normal")
+        self.c3.config(state="normal")  
+
+    #button and hint text according to parts
+    def button(self):
+        if self.current_part == 1: #if displayed part is 1...
+            self.dialogue_label.config(text=self.text_part1) #...show text_part1
+            self.hints_label.config(text="Hint: Assess your surroundings.") #uses hint label customisation and adds the text
+            self.enable_movement() #keybinds are enable to navigate
+        elif self.current_part == 2:
+            self.dialogue_label.config(text=self.text_part2)
+            self.hints_label.config(text="Hint: Assess your surroundings.")
+            self.enable_movement()
+        elif self.current_part == 3:
+            self.dialogue_label.config(text=self.text_part3)
+            self.hints_label.config(text="Hint: Be careful in what you choose to do.")
+            self.enable_choices() #makes button choices clickable   
+            self.disable_movement() #disables keybind as choice is presented
+            self.c1.config(text="Look outside your cell", command=lambda: [self.choice('c1p1'), self.enable_movement()]) #first option, labelled c1p1
+            self.c2.config(text="Pretend to sleep", command=lambda: [self.choice('c2p1'), self.enable_movement()])
+            self.c3.config(text="Eat the food on the tray", command=lambda: [self.choice('c3p1'), self.enable_movement()])
+
+    #update for next part
+    def next_part(self, event=None):
+        if self.current_part < 3:
+            self.current_part += 1 
+            self.button()
+
+    #update for previous part
+    def previous_part(self, event=None):
+        if self.current_part > 1:
+            self.current_part -= 1
+            self.button()
+
+    #choices and the outcomes that follow
+    def choice(self, choice):
+        self.disable_choices()
+        if choice == 'c1p1': #if user picks, show linked outcome c1 = choice 1, p1 = part 1
+            self.dialogue_label.config(text=self.c1o1) #outcome
+        elif choice == 'c2p1':
+            self.dialogue_label.config(text=self.c2o1)
+        elif choice == 'c3p1':
+            self.dialogue_label.config(text=self.c3o1)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = BesottedFate(root)
+    root.mainloop()
