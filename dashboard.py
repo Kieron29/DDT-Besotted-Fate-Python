@@ -394,7 +394,7 @@ class BesottedFate:
 
         #background image customisation
         help_img= Image.open("bfgarage.jpg")
-        help_img = help_img.resize((self.root.winfo_screenwidth(), self.root.winfo_screenheight()))
+        help_img = help_img.resize((root.winfo_screenwidth(), root.winfo_screenheight()))
         help_img = ImageTk.PhotoImage(help_img)
 
         #help and title label
@@ -462,15 +462,18 @@ class BesottedFate:
         text_label.pack(pady=20)
     
         #additional help text
-        help_text = "For help and additional information; \nContact Us - 20035@student.macleans.school.nz\n\nTo play again or restart, click button underneath.\n"
+        help_text = "For help and additional information; \nContact Us - 20035@student.macleans.school.nz\n\nTo return, restart or exit, click the buttons underneath.\n"
         help_label = tk.Label(settings_frame, text=help_text, font=("MS Gothic", 18), bg='white', wraplength=settings_window.winfo_screenwidth())
         help_label.pack(pady=10)
 
-        #restart and exit button
+        #restart, return and exit button
         restart_button = tk.Button(settings_frame, text="Restart", font=("MS Gothic", 18), command=lambda:[self.restart_game(),settings_window.destroy()])
-        restart_button.pack(pady=10)
+        restart_button.pack(pady=10)        
+        return_button = tk.Button(settings_frame, text="Return", font=("MS Gothic", 18), command=settings_window.destroy)
+        return_button.pack(pady=20)
         exit_button = tk.Button(settings_frame, text="Exit", font=("MS Gothic", 18), command=self.root.quit)
         exit_button.pack(pady=10)
+
     
         
     #death screen
