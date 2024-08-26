@@ -1,5 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+from tkinter import messagebox #for warning/popup messages
 
 #new window for content game
 class BesottedFate:
@@ -471,10 +472,9 @@ class BesottedFate:
         restart_button.pack(pady=10)        
         return_button = tk.Button(settings_frame, text="Return", font=("MS Gothic", 18), command=settings_window.destroy)
         return_button.pack(pady=20)
-        exit_button = tk.Button(settings_frame, text="Exit", font=("MS Gothic", 18), command=self.root.quit)
+        exit_button = tk.Button(settings_frame, text="Exit", font=("MS Gothic", 18), command=exit_out)
         exit_button.pack(pady=10)
 
-    
         
     #death screen
     def dead(self):
@@ -500,7 +500,7 @@ class BesottedFate:
         #restart and exit button
         restart_button = tk.Button(death_frame, text="Restart", font=("MS Gothic", 18), command=lambda:[self.restart_game(),death_window.destroy()])
         restart_button.pack(pady=10)
-        exit_button = tk.Button(death_frame, text="Exit", font=("MS Gothic", 18), command=self.root.quit)
+        exit_button = tk.Button(death_frame, text="Exit", font=("MS Gothic", 18), command=exit_out)
         exit_button.pack(pady=10)
         death_label.img = death_img 
 
@@ -514,6 +514,11 @@ class BesottedFate:
         self.c3.config(text="Eat the food on the tray", command=lambda: self.choice('c3p1'))
         self.disable_choices() #do not allow choices to be clicked
         self.enable_movement() #enables keybind navigation
+
+#exit homepage warning box
+def exit_out():
+    if messagebox.askokcancel("Exit", "Exit now?"):
+        root.quit()
         
 if __name__ == "__main__":
     root = tk.Tk()
