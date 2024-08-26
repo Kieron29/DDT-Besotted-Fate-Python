@@ -203,6 +203,11 @@ class regwindow:
             messagebox.showinfo("Warning", "Mismatching Password.")
             return
         
+        #usernames cannot be more than 16 characters, if so then show warning
+        if len(uname) > 16:
+            messagebox.showinfo("Warning", "Username cannot exceed 16 characters.")
+            return
+        
         #puts new user data into database
         connection = sqlite3.connect(DATABASE)
         cursor = connection.cursor()
